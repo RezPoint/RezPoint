@@ -56,7 +56,7 @@
 
 **Ещё открытые репозитории:**
 
-- [tg-userbot](https://github.com/RezPoint/tg-userbot) — мониторинг Telegram-каналов, фильтрация фриланс-заявок, Telethon и SQLite.
+- [tg-userbot](https://github.com/RezPoint/tg-userbot) — форк с доработками: мониторинг Telegram-каналов, фильтрация фриланс-заявок, Telethon и SQLite.
 - [diagnostic_system](https://github.com/RezPoint/diagnostic_system) — диагностика ПК на Python/PyQt5 с PDF-отчётами.
 - [prolongation-analysis](https://github.com/RezPoint/prolongation-analysis) — обработка данных и Excel-отчёты на pandas.
 - [txt-to-json-converter](https://github.com/RezPoint/txt-to-json-converter) — небольшой парсер иерархических данных в JSON.
@@ -92,7 +92,7 @@
 
 Ниже — **опыт из закрытых репозиториев**, включая прошлые проекты и прототипы. Приватность репозитория не означает, что проект сейчас развивается.
 
-- **Аналитика Wildberries / Ozon** — ранее разрабатывавшиеся асинхронные Python-сервисы для сбора статистики через API, хранения данных в PostgreSQL и формирования Excel-отчётов (`asyncio`, `aiohttp`, `asyncpg`, `openpyxl`).
+- **Аналитика Wildberries / Ozon** — поддержка прекращена **01.08.2026**. Реализованы асинхронные Python-сервисы для сбора статистики через API, хранения данных в PostgreSQL и формирования Excel-отчётов (`asyncio`, `aiohttp`, `asyncpg`, `openpyxl`).
 - **avito-scanner** — бот для мониторинга объявлений с фильтрацией, дедупликацией и уведомлениями; Python, aiogram, Playwright, httpx, SQLite.
 - **finance-tracker** — десктопный проект для локального учёта финансов и криптоактивов; Electron, React, SQLite.
 
