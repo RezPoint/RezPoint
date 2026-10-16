@@ -32,17 +32,26 @@
 | **Frontend & Desktop** | TypeScript, React, Vite, Electron |
 | **Инфраструктура** | Linux, Docker, systemd, GitHub Actions, Amvera, structlog |
 
-## Избранные проекты
+## Избранные публичные проекты
 
-### [deskly-crm](https://github.com/RezPoint/deskly-crm)
-Лёгкая CRM для малого бизнеса: клиенты, заказы, товары, задачи и платежи. **Go + GORM + SQLite** на backend, **React + TypeScript** на frontend. Разделение данных пользователей через JWT; собранный SPA раздаётся одним бинарником.
+### [DesklyCRM](https://github.com/RezPoint/deskly-crm) · Go / React / SQLite
 
-**Другие открытые репозитории:**
+CRM для малого бизнеса: клиенты, заказы, товары, задачи, частичные оплаты и дашборд. **Go (net/http, GORM)** для API, **React + TypeScript** для интерфейса, SQLite для хранения данных; JWT-авторизация и разделение данных по tenant. Приложение собирается в один серверный бинарник со встроенным SPA.
 
-- [prolongation-analysis](https://github.com/RezPoint/prolongation-analysis) — анализ пролонгаций.
-- [diagnostic_system](https://github.com/RezPoint/diagnostic_system) — диагностическая система.
-- [todolist](https://github.com/RezPoint/todolist) — менеджер задач.
-- [txt-to-json-converter](https://github.com/RezPoint/txt-to-json-converter) — конвертация текстовых данных в JSON.
+### [TodoList — Telegram Bot & Mini App](https://github.com/RezPoint/todolist) · TypeScript / Fastify / React
+
+Монорепозиторий системы управления задачами: **Telegram-бот, Mini App и общий REST API**. Backend на Fastify + Prisma, интерфейс на React + Tailwind CSS, бот на grammY; общие данные, валидация Zod и Swagger-документация.
+
+### [unbake-test — Audio Alignment R&D](https://github.com/RezPoint/unbake-test) · Python / ASR / ML
+
+Исследовательский прототип для получения текста песен с **таймкодами отдельных слов**. Сравнение faster-whisper и выравнивания через wav2vec2-CTC + `torchaudio.forced_align`; метрики качества, замеры производительности и воспроизводимые эксперименты в Colab. Результаты и ограничения описаны в design doc.
+
+**Другие проекты с открытым кодом:**
+
+- **[tg-userbot](https://github.com/RezPoint/tg-userbot)** — мониторинг Telegram-каналов с фриланс-заказами: Telethon, фильтрация лидов, SQLite и уведомления.
+- **[diagnostic_system](https://github.com/RezPoint/diagnostic_system)** — десктопная диагностика ПК: Python, PyQt5, мониторинг аппаратных ресурсов и PDF-отчёты.
+- **[prolongation-analysis](https://github.com/RezPoint/prolongation-analysis)** — анализ пролонгаций договоров: pandas, расчёт коэффициентов и генерация Excel-отчётов.
+- **[txt-to-json-converter](https://github.com/RezPoint/txt-to-json-converter)** — утилита преобразования вложенных текстовых категорий в JSON.
 
 ## Open Source
 
@@ -73,10 +82,12 @@
 
 ## Непубличные проекты
 
-Часть рабочих и личных проектов находится в закрытых репозиториях:
+Часть проектов и рабочих решений находится в закрытых репозиториях. Ниже — описание задач и используемых технологий без публикации исходного кода.
 
-- **avito-scanner** — Telegram-бот для мониторинга объявлений: aiogram, Playwright, httpx, управление прокси, фоновые asyncio-задачи, кластеризация через scikit-learn.
-- **finance-tracker** — десктопный учёт финансов: мультивалютные счета, операции, долги и криптоактивы; Electron, React, SQLite WASM.
+- **Маркетплейс-аналитика (Wildberries / Ozon)** — асинхронные Python-сервисы для сбора рекламной и аналитической статистики через API, обработки данных в PostgreSQL и формирования Excel-отчётов. `asyncio`, `aiohttp`, `asyncpg`, `openpyxl`, Telegram-интеграции.
+- **avito-scanner** — мониторинг объявлений с ценовыми порогами, дедупликацией, семантической фильтрацией и уведомлениями в Telegram. Python, aiogram, Playwright, httpx, SQLite.
+- **finance-tracker** — локальное десктоп-приложение для мультивалютного учёта финансов и криптоактивов. Electron, React, SQLite WASM, Bybit API.
+- **shorts-factory (экспериментальный)** — конвейер обработки AI-новостей и генерации коротких видео: LLM, TTS, субтитры, ffmpeg, интеграция с YouTube; Python и Docker.
 
 ## Контакты
 
