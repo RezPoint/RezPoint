@@ -32,26 +32,34 @@
 | **Frontend & Desktop** | TypeScript, React, Vite, Electron |
 | **Инфраструктура** | Linux, Docker, systemd, GitHub Actions, Amvera, structlog |
 
-## Избранные публичные проекты
+## Портфолио: реализованные проекты и прототипы
 
-### [DesklyCRM](https://github.com/RezPoint/deskly-crm) · Go / React / SQLite
+Здесь собраны **примеры выполненной работы**, а не список продуктов на активной поддержке. Часть репозиториев — завершённые задачи, исследовательские прототипы или более ранние разработки. Дата последнего коммита сама по себе не говорит о статусе проекта.
 
-CRM для малого бизнеса: клиенты, заказы, товары, задачи, частичные оплаты и дашборд. **Go (net/http, GORM)** для API, **React + TypeScript** для интерфейса, SQLite для хранения данных; JWT-авторизация и разделение данных по tenant. Приложение собирается в один серверный бинарник со встроенным SPA.
+### [DesklyCRM](https://github.com/RezPoint/deskly-crm) — CRM для малого бизнеса
 
-### [TodoList — Telegram Bot & Mini App](https://github.com/RezPoint/todolist) · TypeScript / Fastify / React
+**Go · React · TypeScript · SQLite**
 
-Монорепозиторий системы управления задачами: **Telegram-бот, Mini App и общий REST API**. Backend на Fastify + Prisma, интерфейс на React + Tailwind CSS, бот на grammY; общие данные, валидация Zod и Swagger-документация.
+Клиенты, заказы, товары, задачи, частичные оплаты и дашборд. REST API на Go (`net/http`, GORM), JWT-авторизация, разделение данных по tenant; SPA на React. Сборка приложения в единый серверный бинарник.
 
-### [unbake-test — Audio Alignment R&D](https://github.com/RezPoint/unbake-test) · Python / ASR / ML
+### [unbake-test](https://github.com/RezPoint/unbake-test) — исследование Audio Alignment
 
-Исследовательский прототип для получения текста песен с **таймкодами отдельных слов**. Сравнение faster-whisper и выравнивания через wav2vec2-CTC + `torchaudio.forced_align`; метрики качества, замеры производительности и воспроизводимые эксперименты в Colab. Результаты и ограничения описаны в design doc.
+**Python · faster-whisper · wav2vec2-CTC · PyTorch**
 
-**Другие проекты с открытым кодом:**
+Экспериментальный пайплайн для распознавания текста песен и выравнивания слов с аудио. Сравнение подходов, метрики качества, бенчмарки и дизайн-документ. **Исследовательский прототип, а не готовый сервис.**
 
-- **[tg-userbot](https://github.com/RezPoint/tg-userbot)** — мониторинг Telegram-каналов с фриланс-заказами: Telethon, фильтрация лидов, SQLite и уведомления.
-- **[diagnostic_system](https://github.com/RezPoint/diagnostic_system)** — десктопная диагностика ПК: Python, PyQt5, мониторинг аппаратных ресурсов и PDF-отчёты.
-- **[prolongation-analysis](https://github.com/RezPoint/prolongation-analysis)** — анализ пролонгаций договоров: pandas, расчёт коэффициентов и генерация Excel-отчётов.
-- **[txt-to-json-converter](https://github.com/RezPoint/txt-to-json-converter)** — утилита преобразования вложенных текстовых категорий в JSON.
+### [TodoList](https://github.com/RezPoint/todolist) — Telegram Bot & Mini App
+
+**TypeScript · Fastify · React · Prisma**
+
+Проект 2025 года: Telegram-бот, Mini App и REST API с общей бизнес-логикой. Валидация Zod, Swagger, монорепозиторий. **Пример выполненной разработки, без заявления об активной поддержке.**
+
+**Ещё открытые репозитории:**
+
+- [tg-userbot](https://github.com/RezPoint/tg-userbot) — мониторинг Telegram-каналов, фильтрация фриланс-заявок, Telethon и SQLite.
+- [diagnostic_system](https://github.com/RezPoint/diagnostic_system) — диагностика ПК на Python/PyQt5 с PDF-отчётами.
+- [prolongation-analysis](https://github.com/RezPoint/prolongation-analysis) — обработка данных и Excel-отчёты на pandas.
+- [txt-to-json-converter](https://github.com/RezPoint/txt-to-json-converter) — небольшой парсер иерархических данных в JSON.
 
 ## Open Source
 
@@ -80,14 +88,13 @@ CRM для малого бизнеса: клиенты, заказы, товар
 
 *Мой вклад — обнаружение и документирование ошибки. Анализ первопричины и код исправления — @kokhlo; PR открыл @liuhao1024.*
 
-## Непубличные проекты
+## Другие кейсы (непубличный код)
 
-Часть проектов и рабочих решений находится в закрытых репозиториях. Ниже — описание задач и используемых технологий без публикации исходного кода.
+Ниже — **опыт из закрытых репозиториев**, включая прошлые проекты и прототипы. Приватность репозитория не означает, что проект сейчас развивается.
 
-- **Маркетплейс-аналитика (Wildberries / Ozon)** — асинхронные Python-сервисы для сбора рекламной и аналитической статистики через API, обработки данных в PostgreSQL и формирования Excel-отчётов. `asyncio`, `aiohttp`, `asyncpg`, `openpyxl`, Telegram-интеграции.
-- **avito-scanner** — мониторинг объявлений с ценовыми порогами, дедупликацией, семантической фильтрацией и уведомлениями в Telegram. Python, aiogram, Playwright, httpx, SQLite.
-- **finance-tracker** — локальное десктоп-приложение для мультивалютного учёта финансов и криптоактивов. Electron, React, SQLite WASM, Bybit API.
-- **shorts-factory (экспериментальный)** — конвейер обработки AI-новостей и генерации коротких видео: LLM, TTS, субтитры, ffmpeg, интеграция с YouTube; Python и Docker.
+- **Аналитика Wildberries / Ozon** — ранее разрабатывавшиеся асинхронные Python-сервисы для сбора статистики через API, хранения данных в PostgreSQL и формирования Excel-отчётов (`asyncio`, `aiohttp`, `asyncpg`, `openpyxl`).
+- **avito-scanner** — бот для мониторинга объявлений с фильтрацией, дедупликацией и уведомлениями; Python, aiogram, Playwright, httpx, SQLite.
+- **finance-tracker** — десктопный проект для локального учёта финансов и криптоактивов; Electron, React, SQLite.
 
 ## Контакты
 
